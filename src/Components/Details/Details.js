@@ -1,7 +1,9 @@
 import React from "react";
-import { Card, Col } from "react-bootstrap";
+import { Button, Card, Col } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 const Details = ({ country }) => {
+  const navigate = useNavigate();
   console.log(country);
   const { flags, capital, region, subregion, population, languages, name } =
     country;
@@ -20,6 +22,16 @@ const Details = ({ country }) => {
           <h5>Subregion :{subregion}</h5>
           <h5>languages :{languages.spa}</h5>
           <h5>Population: {population}</h5>
+          <Button size="sm" onClick={() => navigate("/home")}>
+            Back Home
+          </Button>
+          <Button
+            className="ms-2"
+            size="sm"
+            onClick={() => navigate("/countries")}
+          >
+            All Countries
+          </Button>
         </Card.Body>
       </Card>
     </Col>
