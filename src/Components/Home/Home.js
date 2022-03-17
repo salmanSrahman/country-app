@@ -1,13 +1,10 @@
 import React from "react";
 import "./Home.css";
-import Countries from "../Countries/Countries";
-import Header from "../Header/Header";
 
 const Home = () => {
   return (
     <div>
-      <Header />
-      <Countries />
+      <h1>This Is Home.</h1>
     </div>
   );
 };

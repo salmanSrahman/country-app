@@ -1,5 +1,6 @@
 import React from "react";
-import { Container, Nav, Navbar, NavLink } from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 import "./Header.css";
 
 const Header = () => {
@@ -15,6 +16,7 @@ const Header = () => {
             navbarScroll
           >
             <NavLink to="/home">Home</NavLink>
+            <NavLink to="/countries">Countries</NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>
