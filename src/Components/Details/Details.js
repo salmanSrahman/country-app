@@ -22,7 +22,7 @@ const Details = ({ country }) => {
           <h5>Subregion :{subregion}</h5>
           <h5>languages :{languages.spa}</h5>
           <h5>Population: {population}</h5>
-          <Button size="sm" onClick={() => navigate("/home")}>
+          <Button size="sm" variant="warning" onClick={() => navigate("/home")}>
             Back Home
           </Button>
           <Button
