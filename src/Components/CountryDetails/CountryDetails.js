@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Container, Row } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import Details from "../Details/Details";
 
@@ -12,13 +13,16 @@ const CountryDetails = () => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => setCountries(data));
-  }, []);
+  }, [countryName]);
+
   return (
-    <div>
-      {countries.map((country) => (
-        <Details country={country}></Details>
-      ))}
-    </div>
+    <Container>
+      <Row xs={1} md={4} className="g-4">
+        {countries.map((country) => (
+          <Details country={country}></Details>
+        ))}
+      </Row>
+    </Container>
   );
 };
 
