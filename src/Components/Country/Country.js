@@ -1,11 +1,19 @@
 import React from "react";
+import { Card, Col } from "react-bootstrap";
 import "./Country.css";
 
-const Country = () => {
+const Country = ({ country }) => {
+  console.log(country);
+  const { flags, name } = country;
   return (
-    <div>
-      <h1>Country</h1>
-    </div>
+    <Col>
+      <Card>
+        <Card.Img variant="top" className="country-flag" src={flags.png} />
+        <Card.Body>
+          <Card.Title>{name.common}</Card.Title>
+        </Card.Body>
+      </Card>
+    </Col>
   );
 };
 
